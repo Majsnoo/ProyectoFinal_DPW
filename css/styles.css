@@ -1,0 +1,839 @@
+/* ============================================
+   styles.css - Hoja de estilos de PixelVault
+   Tienda Retro de Videojuegos
+   ============================================ */
+
+/* Variables de colores para reutilizar */
+:root {
+    --color-fondo: #0d0d1a;
+    --color-header: #16213e;
+    --color-nav: #0f3460;
+    --color-acento: #e94560;
+    --color-verde: #00ff88;
+    --color-naranja: #f7931e;
+    --color-texto: #eaeaea;
+    --color-gris: #666;
+    --color-tarjeta: #1a1a2e;
+}
+
+/* Reset básico - borra estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Scroll suave cuando se hace click en los enlaces del menú */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background-color: var(--color-header);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--color-acento);
+    /* Sombra para dar profundidad */
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-icono {
+    font-size: 50px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    color: var(--color-verde);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    /* Efecto de brillo tipo neon */
+    text-shadow: 0 0 10px var(--color-verde), 0 0 20px var(--color-verde);
+}
+
+.slogan {
+    color: var(--color-naranja);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+nav {
+    background-color: var(--color-nav);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Sombra en el nav */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Lista del menú usando Flexbox */
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    /* flex-wrap para que en pantallas pequeñas se acomode */
+}
+
+.menu li a {
+    display: block;
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+/* Hover effect del menú */
+.menu li a:hover {
+    color: var(--color-verde);
+    background-color: rgba(0, 255, 136, 0.1);
+    border-bottom: 3px solid var(--color-verde);
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+.seccion {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion h2 {
+    font-size: 32px;
+    color: var(--color-acento);
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
+    /* Línea decorativa debajo del título */
+    padding-bottom: 15px;
+    border-bottom: 2px dashed var(--color-acento);
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--color-gris);
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+/* ============================================
+   SECCIÓN INICIO / BIENVENIDA
+   ============================================ */
+.seccion-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(180deg, #16213e 0%, #0d0d1a 100%);
+    max-width: 100%;
+    padding: 70px 40px;
+    border-bottom: 2px solid var(--color-nav);
+}
+
+.bienvenida-texto {
+    text-align: center;
+    max-width: 600px;
+}
+
+.bienvenida-texto h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.bienvenida-texto p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+/* Botón principal */
+.boton-principal {
+    background-color: var(--color-acento);
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+    display: inline-block;
+    /* Borde al botón */
+    border: 2px solid var(--color-acento);
+}
+
+/* Hover del botón */
+.boton-principal:hover {
+    background-color: transparent;
+    color: var(--color-acento);
+    box-shadow: 0 0 15px var(--color-acento);
+}
+
+/* Contenedor del video */
+.video-bienvenida {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.video-bienvenida h3 {
+    color: var(--color-naranja);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* El iframe del video que se adapta */
+.video-bienvenida iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 8px;
+    border: 2px solid var(--color-nav);
+}
+
+/* ============================================
+   SECCIÓN NOSOTROS
+   ============================================ */
+.seccion-nosotros {
+    background-color: #111;
+    max-width: 100%;
+    padding: 70px 40px;
+    border-bottom: 2px solid var(--color-nav);
+}
+
+.seccion-nosotros h2 {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+/* Layout de dos columnas con Flexbox */
+.nosotros-contenido {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto p {
+    color: #bbb;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Lista de características */
+.lista-nosotros {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-nosotros li {
+    padding: 8px 0;
+    color: var(--color-verde);
+    font-size: 15px;
+    border-bottom: 1px solid #222;
+}
+
+.nosotros-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    /* Sombra a la imagen */
+    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
+    border: 2px solid var(--color-verde);
+}
+
+/* ============================================
+   SECCIÓN PRODUCTOS
+   ============================================ */
+.seccion-productos {
+    padding: 70px 40px;
+    max-width: 100%;
+    border-bottom: 2px solid var(--color-nav);
+}
+
+.seccion-productos h2 {
+    max-width: 1200px;
+    margin: 0 auto 10px;
+}
+
+.seccion-productos .subtitulo-seccion {
+    margin-bottom: 40px;
+}
+
+/* Tarjetas con Flexbox */
+.tarjetas-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta de producto */
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    border-radius: 10px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    /* Borde */
+    border: 1px solid #333;
+    /* Sombra */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover en las tarjetas */
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-acento);
+    box-shadow: 0 8px 25px rgba(233, 69, 96, 0.3);
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--color-verde);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.tarjeta p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Precio */
+.precio {
+    color: var(--color-naranja) !important;
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+/* Botón de cada tarjeta */
+.boton-tarjeta {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.boton-tarjeta:hover {
+    background-color: #c0392b;
+}
+
+/* ============================================
+   SECCIÓN GALERÍA
+   ============================================ */
+.seccion-galeria {
+    max-width: 100%;
+    padding: 70px 40px;
+    background-color: #0a0a15;
+    border-bottom: 2px solid var(--color-nav);
+}
+
+.seccion-galeria h2 {
+    max-width: 1200px;
+    margin: 0 auto 10px;
+}
+
+/* Grid de la galería */
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada elemento de la galería */
+.galeria-item {
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: all 0.3s;
+}
+
+.galeria-item:hover {
+    border-color: var(--color-verde);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.galeria-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+/* Zoom en hover de las imágenes */
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+.galeria-item p {
+    background-color: #16213e;
+    padding: 10px;
+    color: var(--color-verde);
+    font-size: 14px;
+}
+
+/* ============================================
+   SECCIÓN UBICACIÓN
+   ============================================ */
+.seccion-ubicacion {
+    padding: 70px 40px;
+    max-width: 100%;
+    border-bottom: 2px solid var(--color-nav);
+}
+
+.seccion-ubicacion h2 {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.ubicacion-contenido {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.ubicacion-info {
+    flex: 1;
+}
+
+.ubicacion-info h3 {
+    color: var(--color-verde);
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.lista-ubicacion {
+    list-style: none;
+}
+
+.lista-ubicacion li {
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+    color: #bbb;
+    font-size: 15px;
+}
+
+.lista-ubicacion li strong {
+    color: var(--color-naranja);
+}
+
+/* Mapa */
+.mapa {
+    flex: 1.5;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--color-nav);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   SECCIÓN CONTACTO / FORMULARIO
+   ============================================ */
+.seccion-contacto {
+    background-color: #111;
+    max-width: 100%;
+    padding: 70px 40px;
+}
+
+.seccion-contacto h2 {
+    max-width: 1200px;
+    margin: 0 auto 10px;
+}
+
+/* Contenedor del formulario y redes */
+.formulario-contenedor {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* El formulario en sí */
+.formulario {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cada campo del formulario */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: var(--color-verde);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Inputs y textarea */
+.campo input,
+.campo textarea,
+.campo select {
+    background-color: #1a1a2e;
+    border: 2px solid #333;
+    color: var(--color-texto);
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+/* Hover en los inputs */
+.campo input:hover,
+.campo textarea:hover,
+.campo select:hover {
+    border-color: var(--color-nav);
+}
+
+/* Cuando el input está activo (focus) */
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    border-color: var(--color-verde);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
+
+.campo select option {
+    background-color: #1a1a2e;
+}
+
+/* Botón de enviar */
+.boton-enviar {
+    background-color: var(--color-verde);
+    color: #0d0d1a;
+    border: none;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Courier New', monospace;
+    align-self: flex-start;
+}
+
+.boton-enviar:hover {
+    background-color: transparent;
+    color: var(--color-verde);
+    border: 2px solid var(--color-verde);
+    box-shadow: 0 0 15px var(--color-verde);
+    padding: 12px 28px;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    flex: 1;
+}
+
+.redes-sociales h3 {
+    color: var(--color-naranja);
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.iconos-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.red-social {
+    background-color: #1a1a2e;
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.red-social:hover {
+    border-color: var(--color-acento);
+    color: var(--color-acento);
+    transform: translateX(5px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: #080812;
+    border-top: 3px solid var(--color-acento);
+    padding: 40px 20px 0;
+}
+
+.footer-contenido {
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.footer-logo span {
+    font-size: 24px;
+    color: var(--color-verde);
+    text-shadow: 0 0 10px var(--color-verde);
+}
+
+.footer-logo p {
+    color: var(--color-gris);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.footer-links h4,
+.footer-contacto h4 {
+    color: var(--color-acento);
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-verde);
+}
+
+.footer-contacto p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Línea final del footer */
+.footer-bottom {
+    background-color: #050510;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #222;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    color: var(--color-gris);
+    font-size: 13px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* ---- TABLET (máximo 900px de ancho) ---- */
+@media (max-width: 900px) {
+
+    /* El header se hace más pequeño */
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    /* El menú se centra y se achica un poco */
+    .menu li a {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    /* La sección inicio se vuelve una columna */
+    .seccion-inicio {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    /* Nosotros: de dos columnas a una */
+    .nosotros-contenido {
+        flex-direction: column;
+    }
+
+    /* Ubicación: de dos columnas a una */
+    .ubicacion-contenido {
+        flex-direction: column;
+    }
+
+    /* Formulario: de lado a lado a columna */
+    .formulario-contenedor {
+        flex-direction: column;
+    }
+
+    /* Footer: columnas hacia abajo */
+    .footer-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Redes sociales en fila */
+    .iconos-redes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---- CELULAR (máximo 600px de ancho) ---- */
+@media (max-width: 600px) {
+
+    /* El logo más pequeño */
+    .logo h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .logo-icono {
+        font-size: 35px;
+    }
+
+    /* El menú se puede ir a dos filas */
+    .menu {
+        justify-content: center;
+    }
+
+    .menu li a {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+    /* Títulos más pequeños */
+    .seccion h2 {
+        font-size: 24px;
+    }
+
+    /* Bienvenida */
+    .bienvenida-texto h2 {
+        font-size: 26px;
+    }
+
+    .bienvenida-texto p {
+        font-size: 15px;
+    }
+
+    /* El video se adapta en celular */
+    .video-bienvenida iframe {
+        height: 220px;
+    }
+
+    /* Las tarjetas ocupan todo el ancho */
+    .tarjeta {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    /* La galería ocupa todo el ancho */
+    .galeria-item {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    /* Formulario más compacto */
+    .campo input,
+    .campo textarea,
+    .campo select {
+        font-size: 16px; /* Evita zoom automático en iOS */
+    }
+
+    /* Secciones con menos padding */
+    .seccion-inicio,
+    .seccion-nosotros,
+    .seccion-productos,
+    .seccion-galeria,
+    .seccion-ubicacion,
+    .seccion-contacto {
+        padding: 40px 15px;
+    }
+
+    /* El botón de enviar ocupa todo el ancho */
+    .boton-enviar {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    /* Redes sociales en columna en celular */
+    .iconos-redes {
+        flex-direction: column;
+    }
+
+    .footer-contenido {
+        gap: 20px;
+    }
+}
