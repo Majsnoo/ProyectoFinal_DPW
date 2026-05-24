@@ -12,69 +12,84 @@
     <!-- ========== ENCABEZADO / HEADER ========== -->
     <header>
         <div class="header-contenido">
-            <div class="logo">
-                <span class="logo-icono"></span>
-                <h1>PixelVault</h1>
-                <p class="slogan">La mejor tienda retro de videojuegos en Sv</p>
+            <div class="header-top">
+                <a href="#" class="brand-sony">DKOldies Corp</a>
+            </div>
+            <div class="header-main">
+                <div class="logo">
+                    <span class="logo-icono">🎮</span>
+                    <h1>PixelVault</h1>
+                </div>
+                <nav class="menu-principal">
+                    <ul class="menu">
+                        <li><button class="menu-btn">Juegos</button></li>
+                        <li><button class="menu-btn">Consolas</button></li>
+                        <li><button class="menu-btn">Accesorios</button></li>
+                        <li><button class="menu-btn">Promociones</button></li>
+                        <li><button class="menu-btn">Sobre Nosotros</button></li>
+                        <li><button class="menu-btn">Contacto</button></li>
+                    </ul>
+                </nav>
+                <button class="search-btn">🔍 Buscar</button>
             </div>
         </div>
     </header>
 
-    <!-- ========== MENÚ DE NAVEGACIÓN ========== -->
-    <nav>
-        <ul class="menu">
-            <!-- Enlaces internos que llevan a cada sección de la página -->
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#consolas">Consolas</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
     <!-- ========== CONTENIDO PRINCIPAL ========== -->
     <main>
 
-        <!-- SECCIÓN 1: INICIO / BIENVENIDA -->
-        <section id="inicio" class="seccion seccion-inicio">
-            <div class="bienvenida-texto">
-                <h2>¡Bienvenido a PixelVault!</h2>
-                <p>El mejor lugar para encontrar consolas retro, cartuchos y accesorios clásicos. Revive la magia de los 80s y 90s con nosotros.</p>
-                <a href="#productos" class="boton-principal">Ver productos</a>
-            </div>
-            <!-- Video de YouTube incrustado -->
-            <div class="video-bienvenida">
-                <h3>Historia de los videojuegos</h3>
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/Sz4YiVgIMIw?si=kHUJ-kVfUG0UWGZR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 2: SOBRE NOSOTROS -->
-        <section id="nosotros" class="seccion seccion-nosotros">
-            <h2>¿Quiénes Somos?</h2>
-            <div class="nosotros-contenido">
-                <div class="nosotros-texto">
-                    <p>Somos una tienda apasionada por los videojuegos clásicos. Desde el año 2018 llevamos alegría retro a gamers de todas las edades.</p>
-                    <p>Nuestro equipo está formado por coleccionistas y jugadores que conocen cada consola, cada cartucho y cada cable de la época dorada del gaming.</p>
-                    <!-- Lista de características -->
-                    <ul class="lista-nosotros">
-                        <li>+500 títulos en stock</li>
-                        <li>Consolas revisadas y garantizadas</li>
-                        <li>Precios justos y negociables</li>
-                        <li>Compramos tu colección usada</li>
-                        <li>Envíos a todo el país</li>
-                    </ul>
-                </div>
-                <div class="nosotros-imagen">
-                    <!-- Imagen representativa -->
-                    <img src="https://placehold.co/400x300/1a1a2e/00ff88?text=Nuestra+Tienda" alt="Interior de la tienda PixelVault">
+        <!-- SECCIÓN 1: HERO CAROUSEL -->
+        <section id="inicio" class="seccion seccion-hero">
+            <div class="hero-carousel">
+                <div class="hero-slide active">
+                    <div class="hero-content">
+                        <h2>¡Bienvenido a PixelVault!</h2>
+                        <p>El mejor lugar para encontrar consolas retro, cartuchos y accesorios clásicos</p>
+                        <a href="#productos" class="boton-principal">Explorar Productos</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://placehold.co/800x400/1a1a2e/e94560?text=PixelVault+Retro" alt="PixelVault Bienvenida">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 3: PRODUCTOS / SERVICIOS -->
+        <!-- SECCIÓN 2: FEATURED PRODUCT SHOWCASE -->
+        <section id="nosotros" class="seccion seccion-featured">
+            <div class="featured-container">
+                <div class="featured-text">
+                    <h2>Descubre Nuestras Consolas Clásicas</h2>
+                    <p>Consolas de alta calidad, revisadas y garantizadas. Auténticas colecciones de la mejor época del gaming.</p>
+                    <div class="featured-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>+500 títulos en stock</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Garantizadas y revisadas</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Envíos a todo el país</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Compramos colecciones</span>
+                        </div>
+                    </div>
+                    <div class="featured-actions">
+                        <a href="#consolas" class="boton-principal">Más Información</a>
+                        <a href="#contacto" class="boton-secundario">Comprar Ahora</a>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <img src="https://placehold.co/500x400/1a1a2e/00ff88?text=Consolas+Retro" alt="Consolas PixelVault">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: PRODUCTS WITH TABS -->
         <section id="productos" class="seccion seccion-productos">
             <h2>Nuestros Productos</h2>
             <p class="subtitulo-seccion">Encuentra todo lo que necesitas para tu setup retro</p>
@@ -136,12 +151,13 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 4: CONSOLAS DESTACADAS -->
+        <!-- SECCIÓN 3: PRODUCTS CAROUSEL -->
         <section id="consolas" class="seccion seccion-consolas">
-            <h2>Consolas Retro Destacadas</h2>
-            <p class="subtitulo-seccion">Nuestras consolas clásicas más populares</p>
-
-            <div class="consolas-grid">
+            <div class="seccion-header">
+                <h2>Explorar Consolas y Accesorios</h2>
+                <p class="subtitulo-seccion">Catálogo completo de hardware retro</p>
+            </div>
+            <div class="consolas-carousel">
              
                 <div class="consola-card">
                     <img src="imagenes/H2x1_NintendoDSLite_support_no_logo_image800w.jpg" alt="Nintendo DS">
@@ -204,11 +220,12 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 5: GALERÍA -->
+        <!-- SECCIÓN 5: GALLERY GRID -->
         <section id="galeria" class="seccion seccion-galeria">
-            <h2>Galería</h2>
-            <p class="subtitulo-seccion">Un vistazo a nuestro inventario</p>
-
+            <div class="seccion-header">
+                <h2>Galería de Colecciones</h2>
+                <p class="subtitulo-seccion">Explora nuestro inventario</p>
+            </div>
             <!-- Grid de imágenes para la galería -->
             <div class="galeria-grid">
                 <div class="galeria-item">
@@ -246,7 +263,7 @@
                     <h3>PixelVault Store</h3>
                     <ul class="lista-ubicacion">
                         <li><strong>Dirección:</strong> Centro Comercial Multiplaza, Local 45, San Salvador</li>
-                        <li><strong>Teléfono:</strong> +503 2222-3333</li>
+                        <li><strong>Teléfono:</strong> +503 7354 0434</li>
                         <li><strong>Email:</strong> info@pixelvault.com</li>
                         <li><strong>Horario:</strong> Lunes a Sábado 9:00am - 7:00pm</li>
                         <li><strong>Domingo:</strong> 10:00am - 5:00pm</li>
@@ -376,7 +393,7 @@
             </div>
             <div class="footer-contacto">
                 <h4>Contacto</h4>
-                <p>+503 2222-3333</p>
+                <p>+503 2121-2828</p>
                 <p>info@pixelvault.com</p>
             </div>
         </div>
