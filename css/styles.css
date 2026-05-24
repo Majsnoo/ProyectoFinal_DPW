@@ -45,12 +45,7 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.header-top {
-    background-color: #f0f0f0;
-    padding: 8px 20px;
-    text-align: left;
-    border-bottom: 1px solid var(--color-borde);
-}
+
 
 .brand-sony {
     color: #000;
