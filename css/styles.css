@@ -106,7 +106,6 @@ header {
     margin: 0;
     padding: 0;
 }
-
 .menu-btn {
     background: none;
     border: none;
@@ -118,6 +117,8 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-decoration: none; /* ← agrega esta línea */
+    display: inline-block;  /* ← y esta */
 }
 
 .menu-btn:hover {
