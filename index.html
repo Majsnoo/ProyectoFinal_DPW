@@ -4,164 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelVault - Tienda Retro de Videojuegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <!-- ========== ENCABEZADO / HEADER ========== -->
-    <header>
-        <div class="header-contenido">
-            <div class="header-main">
-                <div class="logo">
-                    <h1>PixelVault</h1>
-                </div>
-               <nav class="menu-principal">
-    <ul class="menu">
-        <li><a href="#productos" class="menu-btn">Juegos</a></li>
-        <li><a href="#consolas" class="menu-btn">Consolas</a></li>
-        <li><a href="#galeria" class="menu-btn">Accesorios</a></li>
-        <li><a href="#productos" class="menu-btn">Promociones</a></li>
-        <li><a href="#nosotros" class="menu-btn">Sobre Nosotros</a></li>
-        <li><a href="#contacto" class="menu-btn">Contacto</a></li>
-    </ul>
-</nav>
+    <!-- ========== HEADER ========== -->
+    <header id="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-pixel">PIXEL</span><span class="logo-vault">VAULT</span>
+            </div>
+
+            <!-- Hamburger para móvil -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="menu-principal" id="menu-principal">
+                <button class="menu-close" id="menu-close" aria-label="Cerrar menú">✕</button>
+                <ul class="menu">
+                    <li><a href="#productos" class="menu-btn" onclick="cerrarMenu()">Juegos</a></li>
+                    <li><a href="#consolas" class="menu-btn" onclick="cerrarMenu()">Consolas</a></li>
+                    <li><a href="#galeria" class="menu-btn" onclick="cerrarMenu()">Accesorios</a></li>
+                    <li><a href="#productos" class="menu-btn" onclick="cerrarMenu()">Promociones</a></li>
+                    <li><a href="#nosotros" class="menu-btn" onclick="cerrarMenu()">Sobre Nosotros</a></li>
+                    <li><a href="#contacto" class="menu-btn" onclick="cerrarMenu()">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-overlay" id="menu-overlay" onclick="cerrarMenu()"></div>
+        </div>
     </header>
 
-    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+git     <!-- ========== MAIN ========== -->
     <main>
 
-        <!-- SECCIÓN 1: HERO CAROUSEL -->
+        <!-- HERO -->
         <section id="inicio" class="seccion seccion-hero">
-            <div class="hero-carousel">
-                <div class="hero-slide active">
-                    <div class="hero-content">
-                        <h2>¡Bienvenido a PixelVault!</h2>
-                        <p>El mejor lugar para encontrar consolas retro, cartuchos y accesorios clásicos</p>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <p class="hero-tag">Tienda Retro #1 en El Salvador</p>
+                    <h2>¡Bienvenido a PixelVault!</h2>
+                    <p>El mejor lugar para encontrar consolas retro, cartuchos y accesorios clásicos</p>
+                    <div class="hero-btns">
                         <a href="#productos" class="boton-principal">Explorar Productos</a>
+                        <a href="#contacto" class="boton-secundario">Contáctanos</a>
                     </div>
-                    <div class="hero-image">
-                        <img src="https://placehold.co/800x400/1a1a2e/e94560?text=PixelVault+Retro" alt="PixelVault Bienvenida">
-                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/800x500/0a0a1a/00d4ff?text=PixelVault+Retro" alt="PixelVault Bienvenida">
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: FEATURED PRODUCT SHOWCASE -->
+        <!-- SOBRE NOSOTROS -->
         <section id="nosotros" class="seccion seccion-featured">
             <div class="featured-container">
                 <div class="featured-text">
+                    <p class="seccion-tag">¿Quiénes somos?</p>
                     <h2>Descubre Nuestras Consolas Clásicas</h2>
                     <p>Consolas de alta calidad, revisadas y garantizadas. Auténticas colecciones de la mejor época del gaming.</p>
                     <div class="featured-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>+500 títulos en stock</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Garantizadas y revisadas</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Envíos a todo el país</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Compramos colecciones</span>
-                        </div>
+                        <div class="feature-item"><span class="feature-icon">✓</span><span>+500 títulos en stock</span></div>
+                        <div class="feature-item"><span class="feature-icon">✓</span><span>Garantizadas y revisadas</span></div>
+                        <div class="feature-item"><span class="feature-icon">✓</span><span>Envíos a todo el país</span></div>
+                        <div class="feature-item"><span class="feature-icon">✓</span><span>Compramos colecciones</span></div>
                     </div>
                     <div class="featured-actions">
-                        <a href="#consolas" class="boton-principal">Más Información</a>
+                        <a href="#consolas" class="boton-principal">Ver Consolas</a>
                         <a href="#contacto" class="boton-secundario">Comprar Ahora</a>
                     </div>
                 </div>
                 <div class="featured-image">
-                    <img src="https://placehold.co/500x400/1a1a2e/00ff88?text=Consolas+Retro" alt="Consolas PixelVault">
+                    <img src="https://placehold.co/500x400/0a0a1a/00d4ff?text=Consolas+Retro" alt="Consolas PixelVault">
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 4: PRODUCTS WITH TABS -->
+        <!-- PRODUCTOS -->
         <section id="productos" class="seccion seccion-productos">
-            <h2>Nuestros Productos</h2>
-            <p class="subtitulo-seccion">Encuentra todo lo que necesitas para tu setup retro</p>
+            <div class="seccion-header">
+                <p class="seccion-tag">Catálogo</p>
+                <h2>Nuestros Productos</h2>
+                <p class="subtitulo-seccion">Encuentra todo lo que necesitas para tu setup retro</p>
+            </div>
             <div class="tarjetas-productos">
-
                 <div class="tarjeta">
-                    <img src="https://placehold.co/280x180/16213e/e94560?text=NES+Classic" alt="Nintendo NES">
-                    <h3>Nintendo NES</h3>
-                    <p>La consola que lo empezó todo. Incluye 2 controles y cable de video.</p>
-                    <p class="precio">$45.00</p>
-                    <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    <img src="https://placehold.co/280x180/0d0d2b/e94560?text=NES+Classic" alt="Nintendo NES">
+                    <div class="tarjeta-body">
+                        <h3>Nintendo NES</h3>
+                        <p>La consola que lo empezó todo. Incluye 2 controles y cable de video.</p>
+                        <p class="precio">$45.00</p>
+                        <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    </div>
                 </div>
-
-            
                 <div class="tarjeta">
-                    <img src="https://placehold.co/280x180/16213e/f7931e?text=SNES" alt="Super Nintendo">
-                    <h3>Super Nintendo</h3>
-                    <p>La legendaria SNES con juegos como Mario World y Zelda.</p>
-                    <p class="precio">$65.00</p>
-                    <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    <img src="https://placehold.co/280x180/0d0d2b/f7931e?text=SNES" alt="Super Nintendo">
+                    <div class="tarjeta-body">
+                        <h3>Super Nintendo</h3>
+                        <p>La legendaria SNES con juegos como Mario World y Zelda.</p>
+                        <p class="precio">$65.00</p>
+                        <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    </div>
                 </div>
-
-           
                 <div class="tarjeta">
-                    <img src="https://placehold.co/280x180/16213e/00ff88?text=Sega+Genesis" alt="Sega Genesis">
-                    <h3>Sega Genesis</h3>
-                    <p>La rival de Nintendo. Sonic, Mortal Kombat y mucho más.</p>
-                    <p class="precio">$55.00</p>
-                    <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    <img src="https://placehold.co/280x180/0d0d2b/00d4ff?text=Sega+Genesis" alt="Sega Genesis">
+                    <div class="tarjeta-body">
+                        <h3>Sega Genesis</h3>
+                        <p>La rival de Nintendo. Sonic, Mortal Kombat y mucho más.</p>
+                        <p class="precio">$55.00</p>
+                        <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    </div>
                 </div>
-
-            
                 <div class="tarjeta">
-                    <img src="https://placehold.co/280x180/16213e/9b59b6?text=Game+Boy" alt="Game Boy">
-                    <h3>Game Boy</h3>
-                    <p>La consola portátil más icónica. ¡Pilas no incluidas!</p>
-                    <p class="precio">$35.00</p>
-                    <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    <img src="https://placehold.co/280x180/0d0d2b/9b59b6?text=Game+Boy" alt="Game Boy">
+                    <div class="tarjeta-body">
+                        <h3>Game Boy</h3>
+                        <p>La consola portátil más icónica. ¡Pilas no incluidas!</p>
+                        <p class="precio">$35.00</p>
+                        <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    </div>
                 </div>
-
-
                 <div class="tarjeta">
-                    <img src="https://placehold.co/280x180/16213e/e94560?text=Cartuchos" alt="Cartuchos de juegos">
-                    <h3>Cartuchos</h3>
-                    <p>Gran variedad de cartuchos para NES, SNES, Genesis y más.</p>
-                    <p class="precio">Desde $5.00</p>
-                    <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    <img src="https://placehold.co/280x180/0d0d2b/e94560?text=Cartuchos" alt="Cartuchos">
+                    <div class="tarjeta-body">
+                        <h3>Cartuchos</h3>
+                        <p>Gran variedad de cartuchos para NES, SNES, Genesis y más.</p>
+                        <p class="precio">Desde $5.00</p>
+                        <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    </div>
                 </div>
-
-                
                 <div class="tarjeta">
-                    <img src="https://placehold.co/280x180/16213e/f7931e?text=Accesorios" alt="Accesorios retro">
-                    <h3>Accesorios</h3>
-                    <p>Controles, cables, memorias y todo lo que necesitas.</p>
-                    <p class="precio">Desde $8.00</p>
-                    <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    <img src="https://placehold.co/280x180/0d0d2b/f7931e?text=Accesorios" alt="Accesorios">
+                    <div class="tarjeta-body">
+                        <h3>Accesorios</h3>
+                        <p>Controles, cables, memorias y todo lo que necesitas.</p>
+                        <p class="precio">Desde $8.00</p>
+                        <a href="#contacto" class="boton-tarjeta">Consultar</a>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- SECCIÓN 3: PRODUCTS CAROUSEL -->
+        <!-- CONSOLAS CAROUSEL -->
         <section id="consolas" class="seccion seccion-consolas">
             <div class="seccion-header">
-                <h2>Explorar Consolas y Accesorios</h2>
+                <p class="seccion-tag">Hardware</p>
+                <h2>Explorar Consolas</h2>
                 <p class="subtitulo-seccion">Catálogo completo de hardware retro</p>
             </div>
             <div class="consolas-carousel">
-             
                 <div class="consola-card">
                     <img src="imagenes/H2x1_NintendoDSLite_support_no_logo_image800w.jpg" alt="Nintendo DS">
                     <h3>Nintendo DS</h3>
                     <p class="especificaciones">Dual Screen • 2004</p>
-                    <p class="descripcion">La revolucionaria portátil con pantalla táctil. Títulos: Mario, Pokémon, Zelda.</p>
+                    <p class="descripcion">La revolucionaria portátil con pantalla táctil. Mario, Pokémon, Zelda.</p>
                     <p class="precio">$85.00</p>
                     <a href="#contacto" class="boton-consola">Consultar</a>
                 </div>
-
-                
                 <div class="consola-card">
                     <img src="imagenes/61M6B8NPkbL.jpg" alt="Nintendo 3DS">
                     <h3>Nintendo 3DS</h3>
@@ -170,8 +173,6 @@
                     <p class="precio">$95.00</p>
                     <a href="#contacto" class="boton-consola">Consultar</a>
                 </div>
-
-                <!-- Game Boy Advance -->
                 <div class="consola-card">
                     <img src="imagenes/Game_Boy_Advance.jpg" alt="Game Boy Advance">
                     <h3>Game Boy Advance</h3>
@@ -180,18 +181,14 @@
                     <p class="precio">$65.00</p>
                     <a href="#contacto" class="boton-consola">Consultar</a>
                 </div>
-
-                <!-- Gameboy Original -->
                 <div class="consola-card">
                     <img src="imagenes/Game_Boy_Original.jpg" alt="Game Boy Original">
                     <h3>Game Boy Original</h3>
                     <p class="especificaciones">Clásica • 1989</p>
-                    <p class="descripcion">La portátil que inició todo. Pantalla monocromática, duración de batería.</p>
+                    <p class="descripcion">La portátil que inició todo. Pantalla monocromática, gran batería.</p>
                     <p class="precio">$55.00</p>
                     <a href="#contacto" class="boton-consola">Consultar</a>
                 </div>
-
-                <!-- PlayStation 3 -->
                 <div class="consola-card">
                     <img src="imagenes/e51980bc370294a3845a7270b4d9ec3732bee453.png" alt="PlayStation 3">
                     <h3>PlayStation 3</h3>
@@ -200,8 +197,6 @@
                     <p class="precio">$75.00</p>
                     <a href="#contacto" class="boton-consola">Consultar</a>
                 </div>
-
-                <!-- Sega Dreamcast -->
                 <div class="consola-card">
                     <img src="https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=300&h=250&fit=crop" alt="Sega Dreamcast">
                     <h3>Sega Dreamcast</h3>
@@ -211,119 +206,74 @@
                     <a href="#contacto" class="boton-consola">Consultar</a>
                 </div>
             </div>
+            <!-- Flechas de navegación -->
+            <div class="carousel-nav">
+                <button class="carousel-btn" id="scrollLeft">&#8592;</button>
+                <button class="carousel-btn" id="scrollRight">&#8594;</button>
+            </div>
         </section>
 
-        <!-- SECCIÓN 5: GALLERY GRID -->
+        <!-- GALERÍA -->
         <section id="galeria" class="seccion seccion-galeria">
             <div class="seccion-header">
+                <p class="seccion-tag">Accesorios & Colecciones</p>
                 <h2>Galería de Colecciones</h2>
                 <p class="subtitulo-seccion">Explora nuestro inventario</p>
             </div>
-            <!-- Grid de imágenes para la galería -->
             <div class="galeria-grid">
-                <div class="galeria-item">
-                    <img src="https://placehold.co/300x200/0d0d0d/e94560?text=Coleccion+NES" alt="Colección de juegos NES">
-                    <p>Colección NES</p>
-                </div>
-                <div class="galeria-item">
-                    <img src="https://placehold.co/300x200/0d0d0d/00ff88?text=SNES+Juegos" alt="Juegos de SNES">
-                    <p>Juegos SNES</p>
-                </div>
-                <div class="galeria-item">
-                    <img src="https://placehold.co/300x200/0d0d0d/f7931e?text=Consolas+Sega" alt="Consolas Sega">
-                    <p>Consolas Sega</p>
-                </div>
-                <div class="galeria-item">
-                    <img src="https://placehold.co/300x200/0d0d0d/9b59b6?text=Game+Boys" alt="Colección Game Boy">
-                    <p>Colección Game Boy</p>
-                </div>
-                <div class="galeria-item">
-                    <img src="https://placehold.co/300x200/0d0d0d/e94560?text=Controles+Clasicos" alt="Controles clásicos">
-                    <p>Controles Clásicos</p>
-                </div>
-                <div class="galeria-item">
-                    <img src="https://placehold.co/300x200/0d0d0d/00ff88?text=Atari+2600" alt="Atari 2600">
-                    <p>Atari 2600</p>
-                </div>
+                <div class="galeria-item"><img src="https://placehold.co/300x200/0a0a1a/e94560?text=Coleccion+NES" alt="Colección NES"><p>Colección NES</p></div>
+                <div class="galeria-item"><img src="https://placehold.co/300x200/0a0a1a/00d4ff?text=SNES+Juegos" alt="Juegos SNES"><p>Juegos SNES</p></div>
+                <div class="galeria-item"><img src="https://placehold.co/300x200/0a0a1a/f7931e?text=Consolas+Sega" alt="Consolas Sega"><p>Consolas Sega</p></div>
+                <div class="galeria-item"><img src="https://placehold.co/300x200/0a0a1a/9b59b6?text=Game+Boys" alt="Game Boy"><p>Colección Game Boy</p></div>
+                <div class="galeria-item"><img src="https://placehold.co/300x200/0a0a1a/e94560?text=Controles" alt="Controles"><p>Controles Clásicos</p></div>
+                <div class="galeria-item"><img src="https://placehold.co/300x200/0a0a1a/00d4ff?text=Atari+2600" alt="Atari 2600"><p>Atari 2600</p></div>
             </div>
         </section>
 
-        <!-- SECCIÓN 5: UBICACIÓN -->
+        <!-- UBICACIÓN -->
         <section id="ubicacion" class="seccion seccion-ubicacion">
-            <h2>¿Dónde Estamos?</h2>
+            <div class="seccion-header">
+                <p class="seccion-tag">Encuéntranos</p>
+                <h2>¿Dónde Estamos?</h2>
+            </div>
             <div class="ubicacion-contenido">
                 <div class="ubicacion-info">
                     <h3>PixelVault Store</h3>
                     <ul class="lista-ubicacion">
-                        <li><strong>Dirección:</strong> Centro Comercial Multiplaza, Local 45, San Salvador</li>
-                        <li><strong>Teléfono:</strong> +503 7354 0434</li>
-                        <li><strong>Email:</strong> info@pixelvault.com</li>
-                        <li><strong>Horario:</strong> Lunes a Sábado 9:00am - 7:00pm</li>
-                        <li><strong>Domingo:</strong> 10:00am - 5:00pm</li>
+                        <li><strong>📍 Dirección:</strong> Centro Comercial Multiplaza, Local 45, San Salvador</li>
+                        <li><strong> Teléfono:</strong> +503 7354 0434</li>
+                        <li><strong> Email:</strong> info@pixelvault.com</li>
+                        <li><strong>Horario:</strong> Lunes a Sábado 9:00am – 7:00pm</li>
+                        <li><strong> Domingo:</strong> 10:00am – 5:00pm</li>
                     </ul>
                 </div>
-                <!-- Google Maps incrustado -->
                 <div class="mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.456!2d-89.2182!3d13.6929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330e2b35b1a1f%3A0x1b2c3d4e5f6a7b8c!2sSan+Salvador%2C+El+Salvador!5e0!3m2!1ses!2ssv!4v1620000000000!5m2!1ses!2ssv"
-                        width="100%"
-                        height="350"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Ubicación de PixelVault en San Salvador">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.456!2d-89.2182!3d13.6929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330e2b35b1a1f%3A0x1b2c3d4e5f6a7b8c!2sSan+Salvador%2C+El+Salvador!5e0!3m2!1ses!2ssv!4v1620000000000!5m2!1ses!2ssv" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación PixelVault"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 6: FORMULARIO DE CONTACTO -->
+        <!-- CONTACTO -->
         <section id="contacto" class="seccion seccion-contacto">
-            <h2>Contáctanos</h2>
-            <p class="subtitulo-seccion">¿Tienes alguna pregunta? ¡Escríbenos!</p>
-
-            <!-- Formulario con validaciones HTML5 -->
+            <div class="seccion-header">
+                <p class="seccion-tag">Escríbenos</p>
+                <h2>Contáctanos</h2>
+                <p class="subtitulo-seccion">¿Tienes alguna pregunta? ¡Escríbenos!</p>
+            </div>
             <div class="formulario-contenedor">
                 <form class="formulario" action="#" method="POST">
-
-                    <!-- Campo Nombre - required para hacerlo obligatorio -->
                     <div class="campo">
-                        <label for="nombre">Nombre completo:</label>
-                        <input
-                            type="text"
-                            id="nombre"
-                            name="nombre"
-                            placeholder="Escribe tu nombre"
-                            required
-                            minlength="3">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required minlength="3">
                     </div>
-
-                    <!-- Campo Email - type=email para validar formato -->
                     <div class="campo">
-                        <label for="email">Correo electrónico:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="tucorreo@ejemplo.com"
-                            required>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
                     </div>
-
-                    <!-- Campo Teléfono - pattern para formato de teléfono -->
                     <div class="campo">
-                        <label for="telefono">Teléfono:</label>
-                        <input
-                            type="tel"
-                            id="telefono"
-                            name="telefono"
-                            placeholder="7777-8888"
-                            pattern="[0-9]{4}-[0-9]{4}"
-                            title="Formato: 7777-8888"
-                            required>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="7777-8888" pattern="[0-9]{4}-[0-9]{4}" title="Formato: 7777-8888" required>
                     </div>
-
-                    <!-- Campo Asunto -->
                     <div class="campo">
                         <label for="asunto">¿Qué te interesa?</label>
                         <select id="asunto" name="asunto" required>
@@ -334,33 +284,19 @@
                             <option value="otro">Otro</option>
                         </select>
                     </div>
-
-                    <!-- Campo Mensaje -->
                     <div class="campo">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea
-                            id="mensaje"
-                            name="mensaje"
-                            rows="5"
-                            placeholder="Escribe tu mensaje aquí..."
-                            required
-                            minlength="10">
-                        </textarea>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required minlength="10"></textarea>
                     </div>
-
-                    <!-- Botón de envío -->
                     <button type="submit" class="boton-enviar">Enviar Mensaje</button>
-
                 </form>
-
-                <!-- Iconos sociales / redes -->
                 <div class="redes-sociales">
                     <h3>También nos puedes encontrar en:</h3>
                     <div class="iconos-redes">
-                        <a href="#" class="red-social">Facebook</a>
-                        <a href="#" class="red-social">Instagram</a>
-                        <a href="#" class="red-social">Twitter/X</a>
-                        <a href="#" class="red-social">WhatsApp</a>
+                        <a href="#" class="red-social">📘 Facebook</a>
+                        <a href="#" class="red-social">📸 Instagram</a>
+                        <a href="#" class="red-social">🐦 Twitter/X</a>
+                        <a href="#" class="red-social">💬 WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -368,7 +304,7 @@
 
     </main>
 
-    <!-- ========== PIE DE PÁGINA / FOOTER ========== -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-contenido">
             <div class="footer-logo">
@@ -386,15 +322,13 @@
             </div>
             <div class="footer-contacto">
                 <h4>Contacto</h4>
-                <p>+503 2121-2828</p>
+                <p>+503 7354 0434</p>
                 <p>info@pixelvault.com</p>
             </div>
         </div>
-        
         <div class="footer-bottom">
-            <p>© 2026 PixelVault - Todos los derechos reservados</p>
+            <p>© 2026 PixelVault — Todos los derechos reservados</p>
         </div>
     </footer>
-
 </body>
 </html>
