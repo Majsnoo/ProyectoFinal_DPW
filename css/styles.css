@@ -1,19 +1,19 @@
-/* Variables de colores - Estilo PlayStation Moderno */
+/* Variables de colores - Estilo PlayStation */
 :root {
-    --color-fondo: #000000;
-    --color-header: #0a0a0a;
-    --color-nav: #111111;
-    --color-acento: #0066cc;
-    --color-acento-hover: #0052a3;
+    --color-fondo: #f5f5f5;
+    --color-header: #ffffff;
+    --color-nav: #ffffff;
+    --color-acento: #0070cc;
+    --color-acento-hover: #0056a8;
     --color-verde: #00d9ff;
-    --color-naranja: #ff6b00;
-    --color-texto: #ffffff;
-    --color-texto-claro: #e0e0e0;
-    --color-gris: #999;
-    --color-tarjeta: #1a1a1a;
-    --color-azul-oscuro: #0a2c5a;
+    --color-naranja: #ffb800;
+    --color-texto: #000000;
+    --color-texto-claro: #666666;
+    --color-gris: #999999;
+    --color-tarjeta: #ffffff;
+    --color-azul-oscuro: #0070cc;
     --color-azul-claro: #0052a3;
-    --color-borde: #333333;
+    --color-borde: #e0e0e0;
 }
 
 /* Reset básico - borra estilos por defecto del navegador */
@@ -41,18 +41,19 @@ html {
    ============================================ */
 header {
     background-color: var(--color-header);
-    border-bottom: 1px solid var(--color-borde);
+    border-bottom: 2px solid var(--color-borde);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .header-top {
-    background-color: #050505;
+    background-color: #f0f0f0;
     padding: 8px 20px;
     text-align: left;
     border-bottom: 1px solid var(--color-borde);
 }
 
 .brand-sony {
-    color: var(--color-texto);
+    color: #000;
     font-size: 12px;
     text-decoration: none;
     font-weight: 600;
@@ -90,7 +91,7 @@ header {
 
 .logo h1 {
     font-size: 28px;
-    color: var(--color-texto);
+    color: #000;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 700;
@@ -114,7 +115,7 @@ header {
 .menu-btn {
     background: none;
     border: none;
-    color: var(--color-texto);
+    color: #000;
     font-size: 13px;
     padding: 8px 16px;
     cursor: pointer;
@@ -152,7 +153,7 @@ header {
     padding: 0;
     max-width: 100%;
     margin: 0;
-    background-color: var(--color-fondo);
+    background-color: #ffffff;
 }
 
 .hero-carousel {
@@ -166,7 +167,7 @@ header {
     display: flex;
     width: 100%;
     flex-shrink: 0;
-    background-color: var(--color-fondo);
+    background-color: #f5f5f5;
 }
 
 .hero-slide.active {
@@ -186,7 +187,7 @@ header {
 .hero-content h2 {
     font-size: 48px;
     margin-bottom: 16px;
-    color: var(--color-texto);
+    color: #000;
     font-weight: 700;
     letter-spacing: 0;
     border: none;
@@ -195,7 +196,7 @@ header {
 
 .hero-content p {
     font-size: 18px;
-    color: var(--color-texto-claro);
+    color: #333;
     margin-bottom: 30px;
     line-height: 1.5;
 }
@@ -227,7 +228,7 @@ header {
 
 .seccion h2 {
     font-size: 42px;
-    color: var(--color-texto);
+    color: #000;
     margin-bottom: 12px;
     padding: 0;
     border: none;
@@ -247,7 +248,7 @@ header {
    FEATURED SECTION
    ============================================ */
 .seccion-featured {
-    background-color: #0a0a0a;
+    background-color: #ffffff;
     border-top: 1px solid var(--color-borde);
     border-bottom: 1px solid var(--color-borde);
 }
@@ -265,11 +266,12 @@ header {
 .featured-text h2 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .featured-text > p {
     font-size: 18px;
-    color: var(--color-texto-claro);
+    color: #333;
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -286,7 +288,7 @@ header {
     align-items: center;
     gap: 12px;
     font-size: 15px;
-    color: var(--color-texto-claro);
+    color: #333;
 }
 
 .feature-icon {
@@ -335,7 +337,7 @@ header {
    CONSOLAS CAROUSEL SECTION
    ============================================ */
 .seccion-consolas {
-    background-color: var(--color-fondo);
+    background-color: #f5f5f5;
     border-bottom: 1px solid var(--color-borde);
 }
 
@@ -368,7 +370,7 @@ header {
     padding: 20px;
     text-align: center;
     border: 1px solid var(--color-borde);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -387,21 +389,21 @@ header {
 }
 
 .consola-card h3 {
-    color: var(--color-texto);
+    color: #000;
     margin-bottom: 8px;
     font-size: 18px;
     font-weight: 600;
 }
 
 .consola-card .especificaciones {
-    color: var(--color-gris);
+    color: #666;
     font-size: 12px;
     margin-bottom: 10px;
     font-weight: 500;
 }
 
 .consola-card .descripcion {
-    color: var(--color-texto-claro);
+    color: #666;
     font-size: 14px;
     margin-bottom: 12px;
     line-height: 1.4;
@@ -438,13 +440,14 @@ header {
    ============================================ */
 .seccion-productos {
     padding: 60px 40px;
-    background-color: var(--color-fondo);
+    background-color: #ffffff;
     border-bottom: 1px solid var(--color-borde);
 }
 
 .seccion-productos h2 {
     text-align: center;
     margin-bottom: 12px;
+    color: #000;
 }
 
 .tarjetas-productos {
@@ -461,7 +464,7 @@ header {
     padding: 20px;
     text-align: center;
     border: 1px solid var(--color-borde);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -482,14 +485,14 @@ header {
 }
 
 .tarjeta h3 {
-    color: var(--color-texto);
+    color: #000;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 600;
 }
 
 .tarjeta p {
-    color: var(--color-texto-claro);
+    color: #666;
     font-size: 14px;
     margin-bottom: 12px;
     flex-grow: 1;
@@ -548,7 +551,7 @@ header {
    GALERÍA SECTION
    ============================================ */
 .seccion-galeria {
-    background-color: #050505;
+    background-color: #f5f5f5;
     border-bottom: 1px solid var(--color-borde);
 }
 
@@ -586,9 +589,9 @@ header {
 }
 
 .galeria-item p {
-    background-color: #0f0f0f;
+    background-color: #ffffff;
     padding: 12px;
-    color: var(--color-texto);
+    color: #000;
     font-size: 14px;
     font-weight: 600;
     border-top: 1px solid var(--color-borde);
@@ -599,7 +602,7 @@ header {
    ============================================ */
 .seccion-ubicacion {
     padding: 60px 40px;
-    background-color: var(--color-fondo);
+    background-color: #ffffff;
     border-bottom: 1px solid var(--color-borde);
 }
 
@@ -620,7 +623,7 @@ header {
 }
 
 .ubicacion-info h3 {
-    color: var(--color-acento);
+    color: #000;
     margin-bottom: 24px;
     font-size: 20px;
     font-weight: 600;
@@ -633,7 +636,7 @@ header {
 .lista-ubicacion li {
     padding: 12px 0;
     border-bottom: 1px solid var(--color-borde);
-    color: var(--color-texto-claro);
+    color: #333;
     font-size: 14px;
 }
 
@@ -642,7 +645,7 @@ header {
 }
 
 .lista-ubicacion li strong {
-    color: var(--color-acento);
+    color: #000;
     font-weight: 600;
 }
 
@@ -662,7 +665,7 @@ header {
    CONTACTO / FORMULARIO SECTION
    ============================================ */
 .seccion-contacto {
-    background-color: #0a0a0a;
+    background-color: #ffffff;
     border-bottom: 1px solid var(--color-borde);
 }
 
@@ -688,7 +691,7 @@ header {
 }
 
 .campo label {
-    color: var(--color-texto);
+    color: #000;
     font-size: 14px;
     font-weight: 600;
 }
@@ -696,9 +699,9 @@ header {
 .campo input,
 .campo textarea,
 .campo select {
-    background-color: var(--color-tarjeta);
+    background-color: #f9f9f9;
     border: 1px solid var(--color-borde);
-    color: var(--color-texto);
+    color: #000;
     padding: 12px 15px;
     border-radius: 4px;
     font-size: 14px;
@@ -721,8 +724,8 @@ header {
 }
 
 .campo select option {
-    background-color: var(--color-tarjeta);
-    color: var(--color-texto);
+    background-color: #fff;
+    color: #000;
 }
 
 .boton-enviar {
@@ -751,7 +754,7 @@ header {
 }
 
 .redes-sociales h3 {
-    color: var(--color-texto);
+    color: #000;
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 600;
@@ -764,8 +767,8 @@ header {
 }
 
 .red-social {
-    background-color: #111;
-    color: var(--color-texto);
+    background-color: #f5f5f5;
+    color: #000;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 4px;
@@ -787,7 +790,7 @@ header {
    ============================================ */
 footer {
     background-color: #000000;
-    border-top: 1px solid var(--color-borde);
+    border-top: 2px solid var(--color-borde);
     padding: 40px 20px 0;
 }
 
@@ -802,19 +805,19 @@ footer {
 
 .footer-logo span {
     font-size: 24px;
-    color: var(--color-texto);
+    color: #ffffff;
     font-weight: 700;
 }
 
 .footer-logo p {
-    color: var(--color-gris);
+    color: #999;
     font-size: 13px;
     margin-top: 8px;
 }
 
 .footer-links h4,
 .footer-contacto h4 {
-    color: var(--color-texto);
+    color: #ffffff;
     margin-bottom: 16px;
     font-size: 14px;
     font-weight: 600;
@@ -831,7 +834,7 @@ footer {
 }
 
 .footer-links ul li a {
-    color: var(--color-gris);
+    color: #999;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
@@ -842,13 +845,13 @@ footer {
 }
 
 .footer-contacto p {
-    color: var(--color-gris);
+    color: #999;
     font-size: 14px;
     margin-bottom: 8px;
 }
 
 .footer-bottom {
-    background-color: #050505;
+    background-color: #000000;
     text-align: center;
     padding: 20px;
     border-top: 1px solid var(--color-borde);
@@ -856,7 +859,7 @@ footer {
 }
 
 .footer-bottom p {
-    color: var(--color-gris);
+    color: #666;
     font-size: 13px;
     margin: 0;
 }
