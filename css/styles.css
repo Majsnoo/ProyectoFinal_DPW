@@ -1,6 +1,4 @@
-/* ============================================
-   VARIABLES
-   ============================================ */
+
 :root {
     --bg: #07071a;
     --bg2: #0d0d2b;
@@ -17,9 +15,6 @@
     --font-body: 'Rajdhani', sans-serif;
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -589,9 +584,7 @@ header.scrolled {
     border-color: var(--accent);
 }
 
-/* ============================================
-   GALERÍA
-   ============================================ */
+/* GALERÍA */
 .seccion-galeria {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
@@ -638,9 +631,7 @@ header.scrolled {
     border-top: 1px solid var(--border);
 }
 
-/* ============================================
-   UBICACIÓN
-   ============================================ */
+/*    UBICACIÓN   */
 .seccion-ubicacion {
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
@@ -872,9 +863,6 @@ footer {
 
 .footer-bottom p { color: var(--text-muted); font-size: 13px; }
 
-/* ============================================
-   RESPONSIVE — TABLET (max 900px)
-   ============================================ */
 @media (max-width: 900px) {
 
     /* Header: mostrar hamburger, ocultar nav */
@@ -955,10 +943,6 @@ footer {
     .seccion-consolas, .seccion-galeria, .seccion-ubicacion,
     .seccion-contacto { padding: 60px 20px; }
 }
-
-/* ============================================
-   RESPONSIVE — MÓVIL (max 600px)
-   ============================================ */
 @media (max-width: 600px) {
 
     :root { --header-h: 56px; }
@@ -1015,9 +999,6 @@ footer {
     .carousel-btn { width: 40px; height: 40px; font-size: 16px; }
 }
 
-/* ============================================
-   RESPONSIVE — MÓVIL PEQUEÑO (max 380px)
-   ============================================ */
 @media (max-width: 380px) {
     .logo { font-size: 10px; }
     .hero-content h2 { font-size: 13px; }
